@@ -35,7 +35,6 @@ func /* TODO: レシーバ */ start() {
 		to := c.convert(from)
 		// TODO: 履歴を変数mに代入
 
-		
 		t.memories = append(t.memories, m)
 		// TODO: 結果を表示する
 

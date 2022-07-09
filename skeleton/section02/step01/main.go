@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
 
@@ -19,8 +22,15 @@ func main() {
 	fmt.Println("4: パニックが起きる")
 
 	// TODO: answerというint型の変数を宣言
+	var answer int
 	// TODO: "回答>"と表示
+	fmt.Print("回答>")
 	// TODO: 回答の入力
+	_, err := fmt.Scanln(&answer)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
 
 	// 回答の表示
 	fmt.Println("あなたの回答:", answer)
